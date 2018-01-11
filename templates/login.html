@@ -1,0 +1,19 @@
+
+<head>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/login.css') }}">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+</head>
+
+<div class="login-page">
+  <div class="form">
+    <form action="/" method="POST" class="login-form">
+      <input type="username" name="username" placeholder="Username">
+      <input type="password" name="password" placeholder="Password">
+
+
+
+      <button type="submit">Login</button>
+      <p class="message">Not registered? <a href="/register">Create an account</a></p>
+    </form>
+  </div>
+</div>

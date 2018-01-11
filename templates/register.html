@@ -1,0 +1,22 @@
+
+<head>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/login.css') }}">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+</head>
+
+<div class="login-page">
+  <div class="form">
+    <form action="/register" method="POST" class="login-form">
+      <input type="text" name="username" placeholder="Username"/>
+      <input type="password" name="password" placeholder="Password"/>
+
+       {% if run_mode == 'take-a-tail' %}
+       <p class="message">Append '{{ random_tail }}' to create your new password<!-- <a href="/login">Sign In</a> --></p>
+       <input type="password" name="newpassword" placeholder="New password"/>
+       {% endif %}
+
+      <button type="submit">Create</button>
+      
+    </form>
+  </div>
+</div>
