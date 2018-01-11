@@ -23,6 +23,7 @@ Two methods from the paper are implemented:
     ├── rockyou_10000.txt    # first 10k passwords from the RockYou dataset, used in chaffing
     ├── users_chaffing.db    # chaffing database
     ├── users_tail.db        # take-a-tail database
+    ├── webserver.py         # webserver script (needs flask)
     └── Proiect IC.pdf       # Romanian description of this implementation
 
 
@@ -37,11 +38,11 @@ pip install flask
 python webserver.py [take-a-tail|chaffing]
 ```
 
-  3. Register an user [here](127.0.0.1:5000/register) and memorize the credentials.
+  3. Register a user [here](http://127.0.0.1:5000/register) and memorize the credentials.
 
   4. Run the attacker script to see the information an attacker who reverses hashes would get: 
 ```
 python attacker.py username [take-a-tail|chaffing]
 ```
 
-  5. (optional) Login with one of the passwords [here](127.0.0.1:5000/) obtained by the attacker to simulate a real scenario.
+  5. (optional) Login with one of the passwords [here](http://127.0.0.1:5000/) obtained by the attacker to simulate a real scenario.
